@@ -1,6 +1,15 @@
 function verificaSeOChutePossuiUmValorValido(chute) {
     const valor = +chute;
 
+    if(chute == 'Game over'){
+        document.body.style.background = '#78938A';
+        document.body.innerHTML = `
+            <h4>GAME OVER</h4>
+
+            <button id='botao' class='btn-jogar'>Jogar novamente</button>
+        `;
+    }
+
     if (isNaN(valor)) {
         elementoChute.innerHTML += '<div>Chute inválido!</div>';
     }
